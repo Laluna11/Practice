@@ -28,6 +28,32 @@ class ListViewBuilder extends StatelessWidget {
       initialIndex: 1,
       length: 2,
       child: Scaffold(
+        drawer: Drawer(
+          child: ListView(
+            children: <Widget>[
+              const UserAccountsDrawerHeader(
+                accountName: Text("Lina"),
+                accountEmail: Text("smth@gmail.com"),
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Text("LA"),
+                ),
+              ),
+              const ListTile(
+                title: Text("Item1"),
+                trailing: Icon(Icons.add),
+              ),
+              const Divider(),
+              ListTile(
+                title: const Text("Close"),
+                trailing: const Icon(Icons.close),
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          ),
+        ),
         appBar: AppBar(
           title: const Text('ListView Examples'),
           bottom: const TabBar(
