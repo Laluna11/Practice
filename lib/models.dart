@@ -152,6 +152,15 @@ class WidgetModels {
             backgroundColor: Colors.grey,
             child: Text("LA"),
           ),
+          otherAccountsPictures: <Widget>[
+            CircleAvatar(
+              backgroundColor: Colors.black,
+              child: Text(
+                "LA",
+                style: TextStyle(color: Colors.purple),
+              ),
+            )
+          ],
         ),
         const ListTile(
           title: Text("Item1"),
